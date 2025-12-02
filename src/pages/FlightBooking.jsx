@@ -96,7 +96,7 @@ export default function FlightBooking() {
       <input className="input" type="text" placeholder="Mobile Number *"
         value={mobile} onChange={e => setMobile(e.target.value)} /> <br />
 
-      <button className="btn" onClick={submit}>Confirm Booking</button>
+      <button className="btn book-flight" onClick={submit}>Confirm Booking</button>
     </div>
   );
 }

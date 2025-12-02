@@ -6,8 +6,15 @@ import store from "./redux/store.js";
 import { Provider } from "react-redux";
 
 
-ReactDOM.render(<BrowserRouter>
-  <Provider store={store}>
+// ReactDOM.render(<BrowserRouter>
+//   <Provider store={store}>
+//     <App />
+//   </Provider>
+//   </BrowserRouter>, document.getElementById("root"));
+
+ReactDOM.render(<Provider store={store}>
+  <BrowserRouter>
     <App />
-  </Provider>
-  </BrowserRouter>, document.getElementById("root"));
+  </BrowserRouter>
+</Provider>
+, document.getElementById("root"));

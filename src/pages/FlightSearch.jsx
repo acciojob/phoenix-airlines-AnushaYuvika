@@ -73,6 +73,7 @@ const FlightSearch = () => {
                 <input
                   type="radio"
                   name="flight"
+                  data-testid="select-flight"
                   onChange={() => setSelectedFlight(flight)}
                 />
               </td>
@@ -119,3 +120,4 @@ const FlightSearch = () => {
 };
 
 export default FlightSearch;
+
