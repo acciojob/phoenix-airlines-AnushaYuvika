@@ -71,7 +71,7 @@ export default function FlightBooking() {
 
   const submit = () => {
     if (!first || !last || !email || !mobile) {
-      // alert("All fields are required");
+      alert("All fields are required");
       return;
     }
     
