@@ -71,16 +71,21 @@ export default function FlightBooking() {
 
   const submit = () => {
     if (!first || !last || !email || !mobile) {
-      alert("All fields are required");
+      // alert("All fields are required");
       return;
     }
+    
     dispatch(setUserData({ first, last, email, mobile }));
     navigate("/confirmation");
   };
 
+  if (!flight) {
+    return <h2>Loading...</h2>;
+  }
+
   return (
     <div className="page">
-      <h2>Booking Confirmation for {flight?.name}</h2>
+      <h2>Booking Confirmation for {flight?.flightName}</h2>
 
       <h3>Enter Passenger Details</h3>
 
@@ -96,7 +101,7 @@ export default function FlightBooking() {
       <input className="input" type="text" placeholder="Mobile Number *"
         value={mobile} onChange={e => setMobile(e.target.value)} /> <br />
 
-      <button className="btn book-flight" onClick={submit}>Confirm Booking</button>
+      <button className="btn" onClick={submit}>Confirm Booking</button>
     </div>
   );
 }

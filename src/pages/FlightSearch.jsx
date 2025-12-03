@@ -41,7 +41,13 @@ const FlightSearch = () => {
     alert("Please select a flight to book!");
     return;
   }
-  dispatch(setSearchData(selectedFlight));
+  dispatch(setSearchData({
+    trip: "oneway",   
+    source: selectedFlight.source,
+    destination: selectedFlight.destination,
+    date: "2025-01-01", 
+    flightName: selectedFlight.name
+  }));
   navigate("/flight-booking");
 };
 
